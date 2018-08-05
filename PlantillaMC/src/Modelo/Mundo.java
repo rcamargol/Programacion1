@@ -1,6 +1,7 @@
 package Modelo;
 
-//representa el mundo del problema 
+//Representa el mundo del problema: las clases y métodos que describen el problema 
+
 
 public class Mundo {
 
