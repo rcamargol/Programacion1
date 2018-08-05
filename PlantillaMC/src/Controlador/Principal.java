@@ -12,5 +12,5 @@ public class Principal {
 
 	}
 	
-	//aqui van los demás métodos que 
+	//aqui van los demás métodos que se invocan de Mundo.
 }
