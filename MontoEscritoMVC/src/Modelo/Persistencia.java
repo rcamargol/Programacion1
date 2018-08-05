@@ -11,8 +11,7 @@ public class Persistencia {
 	
 	public Persistencia()
 	{
-		//no pongo nada. Y que?
-		String nada = "";
+		//si se requiere inicializar algún conectionString o variable, se hace aqui.
 	}
 	
 	public String[] getUnidades() {
