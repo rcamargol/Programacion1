@@ -8,16 +8,10 @@ import java.io.PrintWriter;
 
 public class Ejemplos {
 	
-	private Mundo objeto;
-	
 	public Ejemplos() {
 		// TODO Auto-generated constructor stub
 		
 	}
-
-
-	
-	
 	
 	public void ejemploTryCatchArchivos()
 	{
