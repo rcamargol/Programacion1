@@ -3,10 +3,9 @@ package Modelo;
 public class Felino extends Mamifero
 {
 
-	public Felino(String raza, int numPatas)
+	public Felino()
 	{
-		super.raza = raza;
-		super.numeroPatas = numPatas;
+		
 	}
 	
 	

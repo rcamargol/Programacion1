@@ -3,14 +3,12 @@ package Modelo;
 public class Canino extends Mamifero
 {
 
-	public Canino(String raza, int numPatas)
+	public Canino()
 	{
-		super.raza = raza;
-		super.numeroPatas = numPatas;
 		
 	}
 	
-	
+		
 	@Override
 	public void alimentar() {
 		// TODO Auto-generated method stub
