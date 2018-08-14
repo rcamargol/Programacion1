@@ -12,11 +12,11 @@ public class Controlador {
 	public Controlador() throws NullPointerException, DivisorEnCeroException{
 		// TODO Auto-generated constructor stub
 		//ejemploTryCatchFinallyObjetos();
-		ejemploThrow();
-		/*m = new Mundo();
-		m.getR().solicitarConstantes(1,-4,4);
+		//ejemploThrow();
+		m = new Mundo();
+		m.getR().solicitarConstantes(0,-4,4);
 		m.getR().calcularRaices();
-		m.getR().imprimirRaices();*/
+		m.getR().imprimirRaices();
 	}
 
 	public void ejemploTryCatchFinallyObjetos()
