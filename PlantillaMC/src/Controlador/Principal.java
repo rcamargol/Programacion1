@@ -4,13 +4,12 @@ import Modelo.Mundo;
 
 public class Principal {
 
-	Mundo m;
 	
 	public static void main(String[] args) 
 	{
-		// TODO Auto-generated method stub
-
+		//Esta sería la unica instrucción que va aqui
+		Controlador c = new Controlador();
 	}
 	
-	//aqui van los demás métodos que se invocan de Mundo.
+
 }
