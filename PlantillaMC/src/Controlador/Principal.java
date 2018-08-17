@@ -1,7 +1,5 @@
 package Controlador;
 
-import Modelo.Mundo;
-
 public class Principal {
 
 	
