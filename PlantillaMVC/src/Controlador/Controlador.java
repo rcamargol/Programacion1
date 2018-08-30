@@ -18,7 +18,7 @@ public class Controlador {
 		bd = new Mundo();
 		gui = new Interfaz();
 
-		//aqui van los métodos que se invocan de Modelo (Mundo) y de Vista y que ejecutan todo el programa
+		//aqui van los métodos que se invocan de Modelo (Mundo) y de Vista y que ejecutarán el programa.
 		
 		bd.setDato(gui.pedirDato());
 		bd.procesarDato();
