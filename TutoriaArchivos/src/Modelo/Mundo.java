@@ -3,6 +3,7 @@ package Modelo;
 import java.io.*;
 import java.util.Scanner;
 
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
 //Representa el mundo del problema: las clases y métodos que describen el problema 
@@ -45,7 +46,7 @@ public class Mundo {
 	public void leerMontos()
 	{
 		String texto = leerArchivo();
-		JOptionPane.showMessageDialog(null, texto, "Tutoria Montos", INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(null, texto, "Tutoria Montos", JOptionPane.INFORMATION_MESSAGE);
 	}
 	
 	
@@ -72,7 +73,10 @@ public class Mundo {
 	public String leerArchivo() {
 		String linea,salida;
 		salida = "";
-		f = new File(archivo);
+		JFileChooser directorio = new JFileChooser();
+		directorio.showOpenDialog(null);
+		f = directorio.getSelectedFile();
+		//f = new File(archivo);
 		try {
 			fr = new FileReader(f);
 			br = new BufferedReader(fr);
