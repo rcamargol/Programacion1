@@ -30,8 +30,16 @@ public class Interfaz {
 	 * Reemplazar por lo que se necesiten
 	 */
 
-	public void escribirResultado(String dato) 
+	public void imprimirResultados(String figura, double area, double perimetro)
 	{
-		JOptionPane.showMessageDialog(null, dato, "Título del Message Dialog", JOptionPane.INFORMATION_MESSAGE);
+		String cadena = "";
+		cadena = "el area es: "+ area + "\n";
+		cadena = cadena + "el perimetro es: "+perimetro + "\n";
+		escribirResultado(cadena, figura); 
+	}
+	
+	public void escribirResultado(String dato, String titulo) 
+	{
+		JOptionPane.showMessageDialog(null, dato, titulo, JOptionPane.INFORMATION_MESSAGE);
 	}
 }

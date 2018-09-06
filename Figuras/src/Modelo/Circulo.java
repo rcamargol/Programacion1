@@ -3,17 +3,35 @@ package Modelo;
 public class Circulo implements Figura{
 	
 	private double radio;
+	private double area;
+	private double perimetro;
 
 	@Override
-	public double calcularPerimetro() {
+	public void calcularPerimetro() {
 		// TODO Auto-generated method stub
-		return 2 * Math.PI * this.radio;
+		this.perimetro = 2 * Math.PI * this.radio;
+	}
+
+	public double getArea() {
+		return area;
+	}
+
+	public void setArea(double area) {
+		this.area = area;
+	}
+
+	public double getPerimetro() {
+		return perimetro;
+	}
+
+	public void setPerimetro(double perimetro) {
+		this.perimetro = perimetro;
 	}
 
 	@Override
-	public double calcularArea() {
+	public void calcularArea() {
 		// TODO Auto-generated method stub
-		return Math.PI * this.radio * this.radio;
+		this.area = Math.PI * this.radio * this.radio;
 	}
 
 	public double getRadio() {

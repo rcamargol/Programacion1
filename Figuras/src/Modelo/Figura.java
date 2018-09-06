@@ -1,6 +1,6 @@
 package Modelo;
 
 public interface Figura {
-	public abstract double calcularArea();
-	public abstract double calcularPerimetro();
+	public abstract void calcularArea();
+	public abstract void calcularPerimetro();
 }

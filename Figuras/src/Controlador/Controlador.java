@@ -21,9 +21,14 @@ public class Controlador {
 		//aqui van los métodos que se invocan de Modelo (Mundo) y de Vista y que ejecutarán el programa.
 		
 		bd.getCirc().setRadio(Double.parseDouble(gui.pedirRadio()));
-		bd.getCuad().setLado(Double.parseDouble(gui.pedirLado()));
 		bd.getCirc().calcularArea();
 		bd.getCirc().calcularPerimetro();
+		gui.imprimirResultados("Circulo", bd.getCirc().getArea(),bd.getCirc().getPerimetro() );
+		
+		bd.getCuad().setLado(Double.parseDouble(gui.pedirLado()));
+		bd.getCuad().calcularArea();
+		bd.getCuad().calcularPerimetro();
+		gui.imprimirResultados("Cuadrado", bd.getCuad().getArea(), bd.getCuad().getPerimetro());
 	}
 
 }
