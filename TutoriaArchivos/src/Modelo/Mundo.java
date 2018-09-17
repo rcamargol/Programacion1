@@ -21,7 +21,8 @@ public class Mundo {
 	private PrintWriter pw;
 	private FileReader fr;
 	private BufferedReader br;
-	private String archivo = "C:\\data\\tutoria.txt";
+	private String archivo = "tutoria.txt";
+	//private String archivo = "C:\\data\\tutoria.txt";
 	private String[] montos;
 	
 	public Mundo() {
@@ -54,6 +55,7 @@ public class Mundo {
 	{
 		f = new File(archivo);
 		try {
+			System.out.println(f.getAbsolutePath());
 			fw = new FileWriter(f,true);
 			pw = new PrintWriter(fw);
 			for(int i=0 ; i<montos.length ; i++)
