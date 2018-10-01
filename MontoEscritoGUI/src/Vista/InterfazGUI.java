@@ -5,10 +5,7 @@ import javax.swing.JFrame;
 import Controlador.Controlador;
 
 public class InterfazGUI extends JFrame{
-	
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 	private PanelEntrada panelEntrada;
 	private PanelResultados panelResultados;

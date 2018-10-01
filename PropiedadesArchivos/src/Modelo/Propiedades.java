@@ -7,6 +7,7 @@ public class Propiedades {
 
 	private Properties prop = new Properties();
 	private String archivoprop = "C:\\data\\archivo.properties";
+	//private String archivoprop = "C:\\data\\archivo.propiedades";
 
 	public void setPropiedades() {
 		try {
@@ -28,7 +29,9 @@ public class Propiedades {
 			// get the properties and print
 			prop.list(System.out);
 			//Reading each property value
-			System.out.println(prop.getProperty("nombreArchivo"));
+			//System.out.println(prop.keySet().toString());
+			String archivo1 = prop.getProperty("nombreArchivo");
+			System.out.println("Nombre en Variable:"+archivo1);
 			System.out.println(prop.getProperty("archivoProp"));
 			System.out.println(prop.getProperty("nombreCodigo"));
 		} catch (IOException ex) {
