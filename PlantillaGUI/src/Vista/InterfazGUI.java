@@ -32,6 +32,7 @@ public class InterfazGUI extends JFrame{
 		//Se agrega al layout en la parte CENTER, el panel de entrada definido
 		panelResultados = new PanelResultados();
 		add(panelResultados,BorderLayout.CENTER);
+		
 		//se agrega al boton ActionListener del objeto de Controlador - cambio
 		panelEntrada.getButConvertir().addActionListener(control);
 	}
