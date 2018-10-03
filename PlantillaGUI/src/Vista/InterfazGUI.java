@@ -6,14 +6,16 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 
-public class InterfazGUI extends JFrame implements ActionListener{
+import Controlador.Controlador;
+
+public class InterfazGUI extends JFrame{
 
 	//Constante generada por Eclipse  
 	private static final long serialVersionUID = 1L;
 	private PanelEntrada panelEntrada; //Se declara un objeto de tipo PanelEntrada
 	private PanelResultados panelResultados; //Se declara un objeto de tipo PanelResultados
 
-	public InterfazGUI() 
+	public InterfazGUI(Controlador control) 
 	{
 		// Definición de los parámetros básicos de la ventana principal
 		
@@ -30,14 +32,24 @@ public class InterfazGUI extends JFrame implements ActionListener{
 		//Se agrega al layout en la parte CENTER, el panel de entrada definido
 		panelResultados = new PanelResultados();
 		add(panelResultados,BorderLayout.CENTER);
-		panelEntrada.getButConvertir().addActionListener(this);//se agrega al boton ActionListener de este objeto InterfazGUI
+		//se agrega al boton ActionListener del objeto de Controlador - cambio
+		panelEntrada.getButConvertir().addActionListener(control);
 	}
 
-	@Override
-	public void actionPerformed(ActionEvent evento) {
-		// TODO Auto-generated method stub
-		if (evento.getActionCommand().equals(panelEntrada.CONVERTIR)) {
-			panelResultados.getTxtMonto().setText(panelEntrada.getTxtNumero().getText()+" Procesado");
-		}
+	public PanelEntrada getPanelEntrada() {
+		return panelEntrada;
 	}
+
+	public void setPanelEntrada(PanelEntrada panelEntrada) {
+		this.panelEntrada = panelEntrada;
+	}
+
+	public PanelResultados getPanelResultados() {
+		return panelResultados;
+	}
+
+	public void setPanelResultados(PanelResultados panelResultados) {
+		this.panelResultados = panelResultados;
+	}
+
 }
