@@ -19,6 +19,7 @@ public class Controlador implements ActionListener{
 		//aqui van los constructores tanto de Mundo, como de Vista
 		
 		bd = new Mundo();
+		//se Modifica contructor de InterfazGUI para que reciba como parámetro la instancia de Controlador
 		gui = new InterfazGUI(this);
 		gui.setVisible(true); //hacer visible la ventana principal
 		
