@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 import Controlador.Controlador;
 
@@ -14,6 +15,7 @@ public class InterfazGUI extends JFrame{
 	private static final long serialVersionUID = 1L;
 	private PanelEntrada panelEntrada; //Se declara un objeto de tipo PanelEntrada
 	private PanelResultados panelResultados; //Se declara un objeto de tipo PanelResultados
+	private PanelRegistro panelRegistro;
 	
 	public InterfazGUI(Controlador control) 
 	{
@@ -32,9 +34,14 @@ public class InterfazGUI extends JFrame{
 		//Se agrega al layout en la parte CENTER, el panel de entrada definido
 		panelResultados = new PanelResultados();
 		add(panelResultados,BorderLayout.CENTER);
+		panelRegistro = new PanelRegistro();
+		add(panelRegistro,BorderLayout.SOUTH);
 		
 		//se agrega al boton ActionListener del objeto de Controlador - cambio
-		panelEntrada.getButConvertir().addActionListener(control);
+		panelEntrada.getButEscribir().addActionListener(control);
+		panelEntrada.getButLeer().addActionListener(control);
+		panelEntrada.getButLeerReg().addActionListener(control);
+		panelEntrada.getButEscribirReg().addActionListener(control);
 	}
 
 	public PanelEntrada getPanelEntrada() {
@@ -45,6 +52,14 @@ public class InterfazGUI extends JFrame{
 		this.panelEntrada = panelEntrada;
 	}
 
+	public PanelRegistro getPanelRegistro() {
+		return panelRegistro;
+	}
+
+	public void setPanelRegistro(PanelRegistro panelRegistro) {
+		this.panelRegistro = panelRegistro;
+	}
+
 	public PanelResultados getPanelResultados() {
 		return panelResultados;
 	}
@@ -53,4 +68,8 @@ public class InterfazGUI extends JFrame{
 		this.panelResultados = panelResultados;
 	}
 
+	public void escribirMensaje(String mensaje) {
+		JOptionPane.showMessageDialog(null, mensaje, "archivos binarios", JOptionPane.INFORMATION_MESSAGE);
+	}
+	
 }
