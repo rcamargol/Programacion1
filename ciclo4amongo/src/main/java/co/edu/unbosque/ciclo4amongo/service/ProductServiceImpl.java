@@ -25,7 +25,7 @@ public class ProductServiceImpl {
     }
 
     public Product updateProduct(Product product) {
-        Optional < Product > productDb = this.productRepository.findById(product.getId());
+        Optional < Product > productDb = this.productRepository.findById((int) product.getId());
 
         if (productDb.isPresent()) {
             Product productUpdate = productDb.get();
@@ -45,7 +45,7 @@ public class ProductServiceImpl {
 
     public Product getProductById(long productId) {
 
-        Optional < Product > productDb = this.productRepository.findById(productId);
+        Optional < Product > productDb = this.productRepository.findById((int) productId);
 
         if (productDb.isPresent()) {
             return productDb.get();
@@ -55,7 +55,7 @@ public class ProductServiceImpl {
     }
 
     public void deleteProduct(long productId) {
-        Optional < Product > productDb = this.productRepository.findById(productId);
+        Optional < Product > productDb = this.productRepository.findById((int) productId);
 
         if (productDb.isPresent()) {
             this.productRepository.delete(productDb.get());
